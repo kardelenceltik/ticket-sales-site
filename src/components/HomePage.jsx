@@ -73,9 +73,9 @@ const HomePage = () => {
         <div class="card-body">
           <h2 className="text-center welcome-text">WELCOME</h2>
           <p className="text-center">
-            About Biletix "Ticket", which has been bringing entertainment and
-            art enthusiasts together with events since 2000 as "Turkey's entry
-            point to entertainment": The world's leading ticketing company,
+            About "Ticket", which has been bringing entertainment and art
+            enthusiasts together with events since 2000 as "Turkey's entry point
+            to entertainment": The world's leading ticketing company,
             Ticketmaster Family, operating in 21 countries, mainly in North
             America, Europe and the Middle East, under the roof of Live Nation
             Entertainment. is a member.
