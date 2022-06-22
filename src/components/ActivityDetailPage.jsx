@@ -39,7 +39,7 @@ const ActivityDetailPage = () => {
   return (
     <div>
       <div class="container">
-        <div class="card">
+        <div class="card card shadow-sm bg-white rounded ">
           <h3 class="text-center text-dark">{activity?.name}</h3>
 
           <div class="card-header">
