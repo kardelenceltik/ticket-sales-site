@@ -210,3 +210,6 @@ body {
   pointer-events: none;
   color: #aaa;
 }
+.content-page-container {
+  margin-top: 100px;
+}

@@ -18,21 +18,33 @@ const ActivityDetailPage = () => {
       });
   };
   useEffect(() => {
+    console.log(5);
     getCurrentActivity();
   }, []);
   return (
     <div>
-      {activity && <Slider photos={activity?.photo} />}
-      <div dangerouslySetInnerHTML={{ __html: activity?.locationHtml }}></div>
       <div>
-        <ul>
-          {activity?.actors.map((actor) => {
-            return <li key={actor}>{actor}</li>;
-          })}
-        </ul>
+        <div class="card">
+          <div class="card-header">
+            {activity && <Slider photos={activity?.photo} />}
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Name = {activity?.name}</li>
+            <li class="list-group-item">
+              {activity?.actors.map((actor) => {
+                return <li key={actor}>{actor}</li>;
+              })}
+            </li>
+            <li class="list-group-item">Address = {activity?.address}</li>
+            <li class="list-group-item">
+              {" "}
+              <div
+                dangerouslySetInnerHTML={{ __html: activity?.locationHtml }}
+              ></div>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div>Name = {activity?.name}</div>
-      <div>Address = {activity?.address}</div>
     </div>
   );
 };
