@@ -40,7 +40,7 @@ const ActivityDetailPage = () => {
     <div>
       <div class="container">
         <div class="card">
-          <h3 class="text-center">{activity?.name}</h3>
+          <h3 class="text-center text-dark">{activity?.name}</h3>
 
           <div class="card-header">
             {activity && <Slider photos={activity?.photo} />}
@@ -49,7 +49,7 @@ const ActivityDetailPage = () => {
 
         <div class="row">
           <div className="col-5">
-            <div class=" card">
+            <div class=" card pt-4 mt-4">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                   <h6>Artists: </h6>
@@ -60,6 +60,7 @@ const ActivityDetailPage = () => {
                       </li>
                     );
                   })}
+                  <hr />
                   <h6>Pricing : </h6>
                   <ul>
                     {chairPricing?.categories?.map((category) => {
@@ -80,7 +81,7 @@ const ActivityDetailPage = () => {
           </div>
 
           <div className="col-7">
-            <div class="card">
+            <div class="card mt-4">
               <div class="card-header">
                 <h6 className="text-center">City: {activity?.address}</h6>
 

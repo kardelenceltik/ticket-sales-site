@@ -8,7 +8,7 @@ const Slider = ({ photos }) => {
         className=" carousel slide"
         data-ride="carousel"
       >
-        <div className="carousel-inner w-50">
+        <div className="carousel-inner w-100">
           {photos.map((photo, index) => {
             if (index == 0) {
               return (
