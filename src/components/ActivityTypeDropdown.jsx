@@ -18,7 +18,7 @@ const ActivityTypeDropdown = ({ applyFilterByType }) => {
     <div>
       <select
         onChange={(e) => applyFilterByType(e.target.value)}
-        class="form-control"
+        className="form-control"
       >
         {activityTypes.map((activityType) => {
           return (

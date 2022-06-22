@@ -38,20 +38,20 @@ const ActivityDetailPage = () => {
   }, []);
   return (
     <div>
-      <div class="container">
-        <div class="card card shadow-sm bg-white rounded ">
-          <h3 class="text-center text-dark">{activity?.name}</h3>
+      <div className="container">
+        <div className="card card shadow-sm bg-white rounded ">
+          <h3 className="text-center text-dark">{activity?.name}</h3>
 
-          <div class="card-header">
+          <div className="card-header">
             {activity && <Slider photos={activity?.photo} />}
           </div>
         </div>
 
-        <div class="row">
+        <div className="row">
           <div className="col-5">
-            <div class=" card pt-4 mt-4">
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">
+            <div className=" card pt-4 mt-4">
+              <ul className="list-group list-group-flush">
+                <li className="list-group-item">
                   <h6>Artists: </h6>
                   {activity?.actors.map((actor) => {
                     return (
@@ -67,7 +67,9 @@ const ActivityDetailPage = () => {
                       return (
                         <li>
                           {category.name} : {category.price} ₺ <br />
-                          <span class="badge badge-danger">Stock </span> :{" "}
+                          <span className="badge badge-danger">
+                            Stock{" "}
+                          </span> :{" "}
                           <span className="baadge badge-danger">
                             {category.stock}
                           </span>
@@ -81,8 +83,8 @@ const ActivityDetailPage = () => {
           </div>
 
           <div className="col-7">
-            <div class="card mt-4">
-              <div class="card-header">
+            <div className="card mt-4">
+              <div className="card-header">
                 <h6 className="text-center">City: {activity?.address}</h6>
 
                 <div>

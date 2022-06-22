@@ -15,8 +15,8 @@ const Navbar = () => {
   };
   return (
     <div>
-      <div class="navbar fixed-top">
-        <div class="logo" onClick={() => redirectUrlHandler("/")}>
+      <div className="navbar fixed-top">
+        <div className="logo" onClick={() => redirectUrlHandler("/")}>
           <h1>Ticket</h1>
         </div>
         <div className="input-area">
@@ -30,11 +30,11 @@ const Navbar = () => {
             />
           </div>
         </div>
-        <div class="nav__links">
+        <div className="nav__links">
           <a
             href="#"
             onClick={() => redirectUrlHandler("/")}
-            class="active nav__link"
+            className="active nav__link"
           >
             Home
           </a>
@@ -42,7 +42,7 @@ const Navbar = () => {
           <a
             href="#"
             onClick={() => redirectUrlHandler("/activities")}
-            class="nav__link"
+            className="nav__link"
           >
             Activities
           </a>
