@@ -46,21 +46,8 @@ const Navbar = () => {
           >
             Activities
           </a>
-          <a href="#" class="nav__link">
-            Contact
-          </a>
         </div>
       </div>
-
-      {/* <div id="home" class="section">
-        <h1>Home</h1>
-      </div>
-      <div id="about" class="section">
-        <h1>Activities</h1>
-      </div>
-      <div id="contact" class="section">
-        <h1>Contact</h1>
-      </div> */}
     </div>
   );
 };

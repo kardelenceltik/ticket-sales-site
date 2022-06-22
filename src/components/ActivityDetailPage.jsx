@@ -51,13 +51,6 @@ const ActivityDetailPage = () => {
           <div className="col-5">
             <div class=" card">
               <ul class="list-group list-group-flush">
-                {/* <li class="list-group-item"></li>
-                <li class="list-group-item">
-                  <h6>Date:</h6>
-                </li>
-                <li class="list-group-item">
-                  <h6>Description:</h6>
-                </li> */}
                 <li class="list-group-item">
                   <h6>Artists: </h6>
                   {activity?.actors.map((actor) => {

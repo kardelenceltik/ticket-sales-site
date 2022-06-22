@@ -110,20 +110,19 @@ ul {
   display: inline-block;
   height: 40px;
   width: 40px;
-  background-color: rgba(0, 0, 0, 0.425);
+  background-color: rgba(255, 255, 255, 0.993);
   margin: 0 10px 10px 0;
   text-align: center;
   line-height: 40px;
   border-radius: 50%;
-  color: #ffffff;
+  color: #000000;
   transition: all 0.5s ease;
 }
 .footer-col .social-links a:hover {
-  color: #24262b;
+  color: #44009c;
   background-color: #ffffff;
 }
 
-/*responsive*/
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;
@@ -201,17 +200,22 @@ body {
   margin-top: 15px;
   border-radius: 50px;
 }
-
+.welcome-text {
+  font-family: "Poppins", sans-serif;
+}
 .has-search .form-control-feedback {
   position: absolute;
+  left: 70% auto;
+
   z-index: 2;
   display: block;
-  width: 2.375rem;
-  height: 2.375rem;
+  width: 1.305rem;
+  height: 1.305rem;
   line-height: 2.375rem;
   text-align: center;
   pointer-events: none;
   color: #aaa;
+  border-radius: 50%;
 }
 .content-page-container {
   margin-top: 100px;
@@ -250,4 +254,8 @@ h3 {
 }
 .action a:hover {
   background: #000;
+}
+.fa-search {
+  margin-left: 13px !important;
+  margin-top: 1px !important;
 }

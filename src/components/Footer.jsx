@@ -44,19 +44,19 @@ const Footer = () => {
               </ul>
             </div>
             <div class="footer-col">
-              <h4>online shop</h4>
+              <h4>policies and notices</h4>
               <ul>
                 <li>
-                  <a href="#">watch</a>
+                  <a href="#">Contract and Policies</a>
                 </li>
                 <li>
-                  <a href="#">bag</a>
+                  <a href="#">Cookie Policy</a>
                 </li>
                 <li>
-                  <a href="#">shoes</a>
+                  <a href="#">Manage Preferences</a>
                 </li>
                 <li>
-                  <a href="#">dress</a>
+                  <a href="#">About Protection of Personal Data</a>
                 </li>
               </ul>
             </div>

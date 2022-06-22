@@ -60,34 +60,54 @@ const ActivitiesPage = () => {
         .then((response) => {
           setActivities(response.data);
         });
+      axios.get("http://localhost:7070/activity/get").then((response) => {
+        let tempPlace = [];
+        response.data.forEach((activity) => {
+          var isExist = tempPlace.includes(activity.address);
+          if (!isExist) {
+            tempPlace.push(activity.address);
+          }
+        });
+        setPlaces(tempPlace);
+      });
     } else {
       getActivity();
     }
   }, []);
   return (
     <div className="container mt-3">
-      <ActivityTypeDropdown applyFilterByType={applyFilterByType} />
-      <input
-        type="date"
-        onChange={(e) => setCurrentDate(e.target.value)}
-        className="form-control"
-        id="filter-date"
-      />
-      <select
-        id="place-area"
-        className="form-control form-select"
-        onChange={(e) => setCurrentPlace(e.target.value)}
-      >
-        {places.map((place) => {
-          return <option value={place}>{place}</option>;
-        })}
-      </select>
+      <div className="row">
+        <div className="col-4">
+          <ActivityTypeDropdown applyFilterByType={applyFilterByType} />
+        </div>
+        <div className="col-4">
+          <input
+            type="date"
+            onChange={(e) => setCurrentDate(e.target.value)}
+            className="form-control"
+            id="filter-date"
+          />
+        </div>
+        <div className="col-4">
+          <select
+            id="place-area"
+            className="form-control form-select"
+            onChange={(e) => setCurrentPlace(e.target.value)}
+          >
+            {places.map((place) => {
+              return <option value={place}>{place}</option>;
+            })}
+          </select>
+        </div>
+      </div>
+
       <button
         onClick={applyAllFilterForActivite}
-        className="btn btn-outline-primary"
+        className="btn btn-dark mt-3 form-control"
       >
         Apply Filter
       </button>
+      <h4 className="text-center mt-5">Activities</h4>
       <div className="row ">
         {activities.map((activity) => {
           return (
@@ -102,7 +122,7 @@ const ActivitiesPage = () => {
         })}
       </div>
       <hr />
-      <h6>Old Activities</h6>
+      <h4 className="text-center">Old Activities</h4>
       <div className="row ">
         {oldActivities.map((activity) => {
           return (
