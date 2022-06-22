@@ -2,20 +2,20 @@ import React from "react";
 
 const Slider = ({ photos }) => {
   return (
-    <div>
+    <div className="contaier">
       <div
         id="carouselExampleControls"
-        className="carousel slide"
+        className=" carousel slide"
         data-ride="carousel"
       >
-        <div className="carousel-inner">
+        <div className="carousel-inner w-50">
           {photos.map((photo, index) => {
             if (index == 0) {
               return (
                 <div className="carousel-item active">
                   <img
                     src={photo}
-                    style={{ height: "500px" }}
+                    style={{ height: "300px" }}
                     className="d-block w-100"
                     alt="..."
                   />

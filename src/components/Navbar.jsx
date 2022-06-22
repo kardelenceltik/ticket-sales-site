@@ -6,6 +6,13 @@ const Navbar = () => {
   const redirectUrlHandler = (redirectLink) => {
     navigate(redirectLink);
   };
+  const searchApplyFilter = (e) => {
+    if (e.keyCode == 13) {
+      const inputValue = e.target.value;
+      navigate("/activities?inputValue=" + inputValue);
+      window.location.reload();
+    }
+  };
   return (
     <div>
       <div class="navbar fixed-top">
@@ -15,7 +22,12 @@ const Navbar = () => {
         <div className="input-area">
           <div className="form-group has-search">
             <span className="fa fa-search form-control-feedback"></span>
-            <input type="text" className="form-control" placeholder="Search" />
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search"
+              onKeyUp={(e) => searchApplyFilter(e)}
+            />
           </div>
         </div>
         <div class="nav__links">
